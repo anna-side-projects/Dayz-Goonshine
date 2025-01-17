@@ -11,6 +11,13 @@ class sauce_BaseMdfr : ModifierBase
         
         DisableActivateCheck();
     }
+
+    override void OnActivate(PlayerBase player)
+    {
+        NH_CirculatoryItemProfile m_Profile = NH_PlayerCirculatorySystem.GetProfile("Alcohol");
+        float maxConcentration = m_Profile.GetConcentrationMax();
+        player.GetCirculatorySystem().SetConcentration("Alcohol", maxConcentration/2);
+    }
     override bool ActivateCondition(PlayerBase player)
     {
         return true;

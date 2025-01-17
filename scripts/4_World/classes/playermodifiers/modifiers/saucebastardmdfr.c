@@ -17,6 +17,7 @@ class sauce_BastardMdfr : sauce_BaseMdfr
 
     override void OnActivate(PlayerBase player)
     {
+        super.OnActivate(player);
         player.GetTransferValues().ReceiveValue(TransferValues.TYPE_RADX, -1000);
     }
 }

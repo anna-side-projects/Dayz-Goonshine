@@ -20,6 +20,7 @@ class sauce_PapochkaMdfr : sauce_BaseMdfr
 
     override void OnActivate(PlayerBase player, float deltaT)
     {
+        super.OnActivate(player,deltaT);
         NH_CirculatoryItemProfile m_Profile = NH_PlayerCirculatorySystem.GetProfile("Alcohol");
         float maxConcentration = m_Profile.GetConcentrationMax();
         player.GetCirculatorySystem().SetConcentration("Alcohol", maxConcentration);

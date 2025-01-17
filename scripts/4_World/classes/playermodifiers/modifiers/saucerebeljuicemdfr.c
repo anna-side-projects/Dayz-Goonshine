@@ -10,14 +10,14 @@ class sauce_RebelJuiceMdfr : sauce_BaseMdfr
 
     override void OnActivate(PlayerBase player)
     {
+        super.OnActivate(player);
         player.m_ShockHandler.SetShock(-50);
-
-        //todo add morphien effect
+        player.GetModifiersManager().ActivateModifier(eModifiers.MDF_MORPHINE);
     }
 
     override void OnDeactivate(PlayerBase player)
     {
-        //todo remove morphine effect
+        player.GetModifiersManager().ActivateModifier(eModifiers.MDF_MORPHINE);
     }
 
 }
