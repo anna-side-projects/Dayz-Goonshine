@@ -4,5 +4,6 @@ class Goonshine_Base : Inventory_Base
     void Chug(PlayerBase player)
     {
         player.GetModifiersManager().ActivateModifier(modifierId);
+        this.DeleteSafe();
     }
 }
