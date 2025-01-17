@@ -12,7 +12,7 @@ class sauce_BastardMdfr : sauce_BaseMdfr
 
     override void OnTick(PlayerBase player, float deltaT)
     {
-        player.AddHealth("GlobalHealth", "Health", -(damage * deltaT))
+        player.AddHealth("GlobalHealth", "Health", -((damage/1000) * deltaT))
     }
 
     override void OnActivate(PlayerBase player)
